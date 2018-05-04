@@ -28,6 +28,10 @@ body {
 header {
 	width: 100%;
 	height: 70px;
+	position: fixed;
+	top: 0;
+	z-index: 200;
+	background-color: white;
 }
 
 .logo {
@@ -41,6 +45,10 @@ header {
 .bottom-line {
 	height: 4px;
 	background-image: linear-gradient(to right,#e97531 0,#e97531 35%,#eba83e 35%,#eba83e 65%,#e97531 65%,#e97531 100%);
+}
+
+main {
+	margin-top: 85px;
 }
 
 .team-facts {
