@@ -1,7 +1,23 @@
+@font-face {
+    font-family: pfd;
+    src: url(../fonts/PFDinTextCompPro-LightItalic.otf);
+}
+
+@font-face {
+    font-family: zona;
+    src: url(../fonts/ZonaPro-Light.otf);
+}
+
 * {
-	font-family: 'Open Sans', sans-serif;
+	font-family: zona, sans-serif;
 	margin: 0 auto;
 	padding: 0;
+	max-width: 920px;
+}
+
+a {
+	color: white;
+	text-decoration: none;
 }
 
 body {
@@ -11,10 +27,258 @@ body {
 
 header {
 	width: 100%;
-	height: 100px;
+	height: 70px;
 }
+
 .logo {
-	width: 500px;
-	height: 500px;
+	display: block;
+	width: 170px;
+	height: 70px;
 	background: url(../images/logo_desktop.svg) no-repeat;
+	min-width: 140px;
+}
+
+.bottom-line {
+	height: 4px;
+	background-image: linear-gradient(to right,#e97531 0,#e97531 35%,#eba83e 35%,#eba83e 65%,#e97531 65%,#e97531 100%);
+}
+
+.team-facts {
+	margin: 10px 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+.team-fact-badge {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background-color: #e97531;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.badge-number {
+	font-size: 3rem;
+	line-height: 2rem;
+  letter-spacing: -5px;
+  text-align: center;
+  font-family: pfd,sans-serif;
+  font-style: italic;
+  color: white;
+}
+
+.badge-description {
+	font-size: 1rem;
+	font-family: pfd,sans-serif;
+	color: white;
+}
+
+.vacancy {
+	width: 100%;
+	height: 480px;
+	display: flex;
+	justify-content: flex-end;
+	position: relative;
+	overflow: hidden;
+}
+
+.vacancy-background {
+	width: 100%;
+	height: 480px;
+	position: absolute;
+	background: url(../images/hiring-background-1.png) no-repeat;
+	filter: blur(0px);
+	z-index: 99;
+}
+
+.vacancy-content {
+	margin-left: 35%;
+	width: 65%;
+	z-index: 100;
+	color: white;
+}
+
+h3 {
+	margin-right: 10px;
+	text-align: center;
+}
+
+.vacancy-title {
+	margin-right: 10px;
+	text-align: center;
+	font-size: 3rem;
+	text-transform: uppercase;
+	border-bottom: 2px solid white;
+}
+
+article {
+	margin: 20px 0;
+}
+
+article h2 {
+	margin-bottom: 20px;
+}
+
+ul {
+	margin-left: 20px;
+	font-size: 1.5rem;
+}
+
+.social-buttons {
+	margin: 10px;
+	list-style: none;
+	display: flex;
+}
+
+.social-buttons li a {
+	display: block;
+	width: 50px;
+	height: 50px;
+}
+
+.twitter {
+	background: url(../images/social-icons-sprite.png) no-repeat;
+	background-position: -6px -10px;
+}
+
+.plus {
+	background: url(../images/social-icons-sprite.png) no-repeat;
+	background-position: -6px -89px;
+}
+
+.linkedin {
+	background: url(../images/social-icons-sprite.png) no-repeat;
+	background-position: -6px -163px;
+}
+
+.youtube {
+	background: url(../images/social-icons-sprite.png) no-repeat;
+	background-position: -6px -236px;
+}
+
+.facebook {
+	background: url(../images/social-icons-sprite.png) no-repeat;
+	background-position: -6px -312px;
+}
+
+footer {
+	width: 100%;
+	height: 200px;
+	background-color: #ff9400;
+	display: flex;
+}
+
+.location-info-container {
+	margin: 40px 0;
+	width: 60%;
+	display: flex;
+	justify-content: center;
+	z-index: 100;
+}
+
+.location-icon {
+	margin: 0;
+	width: 70px;
+	height: 100px;
+	display: block;
+	background: url(../images/location-sprite.png) no-repeat;
+}
+
+.location-info-content {
+	margin: 0 0 0 20px;
+	display: flex;
+	flex-direction: column;
+	color: white;
+}
+
+.location-info-content a {
+	margin: 0;
+}
+
+.all-vacancy-link {
+	text-decoration: underline;
+}
+
+.location-title {
+	margin: 0 0 10px 0;
+}
+
+
+.location-img-container {
+	width: 40%;
+	height:auto;
+	position: relative;
+}
+
+.location-img-container img {
+	max-height: 100%;
+	width: auto;
+	align-self: right;
+	position: absolute;
+	right: 10px;
+	z-index: 99;
+}
+
+@media (max-width: 768px) {
+
+ 	.vacancy-background {
+		filter: blur(2px);
+	}
+
+	ul {
+	font-size: 1.2rem;
+	}
+}
+
+@media (max-width: 560px) {
+	.location-info-content {
+		margin: 0 0 0 5px;
+	}
+
+	.location-img-container img {
+		filter: blur(2px);
+	}
+}
+
+@media (max-width: 480px) {
+	ul {
+	font-size: 1rem;
+	}
+
+	.location-info-container {
+		width: 100%;
+	}
+
+	.location-info-content {
+		color: black;
+	}
+
+	.location-info-content a {
+		color: black;
+	}
+
+	.location-img-container {
+		width: 0;
+	}
+
+	.location-icon {
+		background: url(../images/location-sprite-2.png) no-repeat;
+	}
+}
+
+@media (max-width: 360px) {
+	.vacancy-title {
+		font-size: 2rem;
+	}
+
+	article {
+		margin: 10px 0;
+	}
+
+	article h2 {
+		margin-bottom: 10px;
+	}
 }
